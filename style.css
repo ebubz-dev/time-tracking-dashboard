@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+body {  
+    background-color: hsl(226, 43%, 10%);
+    width: 100vw;
+    margin: 0;
+    font-family: "Rubik";
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    display: grid;
+    gap: 2vw;
+    margin: auto;
+}
+main {
+    flex-grow: 1;
+    display: flex;
+}
+.div h1 {
+    font-weight: lighter;
+    font-size: 37px;
+    margin: 0;
+}
+.work, .play, .study, .exercise, .social, .selfcare {
+    position: relative;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    min-width: 150px;
+}
+.work {
+    background-color: hsl(15, 100%, 70%);
+    background-image: url('./images/icon-work.svg');
+    background-position: 90% -5%;
+}
+.play {
+    background-color: hsl(195, 74%, 62%);
+    background-image: url('./images/icon-play.svg');
+    background-position: 90% -3%;
+}
+.study {
+    background-color: hsl(348, 100%, 68%);
+    background-image: url('./images/icon-study.svg');
+    background-position: 90% -5%;
+}
+.exercise {
+    background-color: hsl(145, 58%, 55%);
+    background-image: url('./images/icon-exercise.svg');
+    background-position: 90% 0;
+}
+.social {
+    background-color: hsl(264, 64%, 52%);
+    background-image: url('./images/icon-social.svg');
+    background-position: 90% -10%;
+}
+.selfcare {
+    background-color: hsl(43, 84%, 65%);
+    background-image: url('./images/icon-self-care.svg');
+    background-position: 90% -5%;
+}
+.div {
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 150px;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 11px;
+    background-color: hsl(235, 46%, 20%);
+    color: hsl(0, 0%, 100%);
+    height: 80%;
+}
+.div:hover:not(:has(*:hover)) {
+    background-color: hsl(235, 45%, 61%);
+    cursor: pointer;
+}
+.ellipsis:hover {
+    cursor: pointer;
+}
+.ellipsis {
+    margin: auto;
+}
+.one {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(235, 46%, 20%);
+    width: 100%;
+    border-radius: 12px;
+    color: hsl(235, 45%, 61%);
+}
+.one div {
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 12px;
+    color: hsl(0, 0%, 100%);
+}
+.one h1 {
+    flex-grow: 1;
+    font-weight: lighter;
+}
+.one p {
+    font-size: 11px;
+    color: hsl(236, 100%, 87%);
+}
+.one span:hover {
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+.one > p {
+    display: flex;
+    margin-top: 2vh;
+    justify-content: space-between;
+    font-size: 16px;
+}
+@media screen and (max-width: 1159px) {
+    main {
+        min-width: 320px;
+        width: 100%;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        width: 40%;
+        min-width: 196px;
+    }
+    .div {
+        margin-top: 35px;
+        grid-template-columns: 1fr 0.7fr;
+    }
+    .bottom {
+        text-align: right;
+    }
+    .one div {
+        display: grid;
+        grid-template-columns: 0.1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 15px;
+        height: 80%;
+        align-items: center;
+    }
+    .one img {
+        grid-row: 1 / span 2;
+        border: 3px solid white;
+        border-radius: 50%;
+        width: 65px;
+        margin: 10px 0;
+    }
+    .one h1 {
+        font-size: 25px;
+        margin: 0 0 auto 15px;
+    }
+    .one p {
+        margin: auto 0 0 15px;
+    }
+    .one > p {
+        display: flex;
+        margin: 10px;
+        margin-top: 2vh;
+        font-size: 16px;
+    }
+
+}
+@media screen and (min-width: 1160px){
+    body {
+        height: 100vh;
+    }
+    main {
+        min-width: 1160px;
+    }
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        width: 70%;
+        height: 63%;
+    }
+    .title {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .bottom {
+        grid-column: 1 / span 2;
+        grid-row: 3 /4;
+    }
+    .div {
+        position: absolute;
+        bottom: 0;
+    }
+    .one {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+    .one div {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        height: 70%;
+    }
+    .one img {
+        border: 3px solid white;
+        border-radius: 50%;
+        width: 75px;
+    }
+    .one h1 {
+        font-size: 37px;
+        margin: 0 0 15px;
+    }
+    .one p {
+        margin-top: 35px;
+        margin-bottom: 0;
+    }
+    .one > p {
+        flex-direction: column;
+        margin: 25px;
+        height: 20%;
+    }
+}
